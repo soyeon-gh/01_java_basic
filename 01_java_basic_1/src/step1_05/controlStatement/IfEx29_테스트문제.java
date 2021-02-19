@@ -26,16 +26,6 @@ public class IfEx29_테스트문제 {
 		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
 
-		// String 변수
-		String userLeft = "";
-		String userRight = "";
-		String computerLeft = "";
-		String computerRight = "";
-
-		String scissors = "가위";
-		String rock = "바위";
-		String paper = "보";
-
 		System.out.println("────────────────────────────");
 		System.out.println(" 가위 바위 보 (하나빼기) ");
 		System.out.println("가위바위보를 두 번 입력하여");
@@ -50,21 +40,6 @@ public class IfEx29_테스트문제 {
 		int meLeft = sc.nextInt();
 		System.out.print("2. 가위바위보 입력 >> ");
 		int meRight = sc.nextInt();
-
-		// me String
-//		if(meLeft == 1) {
-//			userLeft = scissors;
-//		} else if(meLeft == 2) {
-//			userLeft = rock;
-//		} else if(meLeft == 3) {
-//			userLeft = paper;
-//		} else if(meRight == 1) {
-//			userRight = scissors;
-//		} else if(meRight == 2) {
-//			userRight = rock;
-//		} else if(meRight == 3) {
-//			userRight = paper;
-//		}
 
 		// meFinal = 1 : 왼쪽 선택
 		// meFinal = 2 : 오른쪽 선택
@@ -82,21 +57,6 @@ public class IfEx29_테스트문제 {
 		// -- computer --
 		int comLeft = random.nextInt(3) + 1;
 		int comRight = random.nextInt(3) + 1;
-
-		// computer String
-//		if(comLeft == 1) {
-//			computerLeft = scissors;
-//		} else if(comLeft == 2) {
-//			computerLeft = rock;
-//		} else if(comLeft == 3) {
-//			computerLeft = paper;
-//		} else if(comRight == 1) {
-//			computerRight = scissors;
-//		} else if(comRight == 2) {
-//			computerRight = rock;
-//		} else if(comRight == 3) {
-//			computerRight = paper;
-//		}
 
 		// comFinal = 1 : 왼쪽 선택
 		// comFinal = 2 : 오른쪽 선택

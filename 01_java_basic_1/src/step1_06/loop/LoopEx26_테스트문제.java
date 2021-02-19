@@ -22,9 +22,28 @@ public class LoopEx26_테스트문제 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("Enter Number ? ");
-		int getNumber = scan.nextInt();
+		int number = 0;
+		boolean isRunning = true;
 		
+		while (isRunning) {
+			
+			System.out.println("0을 입력하면 종료됩니다.");
+			System.out.print("Enter Number ? ");
+			int getNumber = scan.nextInt();
+			
+			if (getNumber != 0) {
+				for (int i = getNumber; i < getNumber * 2; i++) {
+					if (getNumber % i == 0 && getNumber < i) {
+						 number = i;
+						 System.out.println(getNumber + "보다 큰 첫번째 소수는 " +  number);
+					}
+				}
+				
+			} else {
+				System.out.println("종료합니다.");
+				isRunning = false;
+			}
+		}
 		scan.close();
 		
 	}

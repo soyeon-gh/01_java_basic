@@ -55,21 +55,66 @@ public class LoopEx25_테스트문제 {
 		System.out.println();
 
 		int cnt = 0;
-		int drainage = 0;
+		int[] number = null;
+		int loop = 0;
 		
 		for (int i = 50; i <= 100; i++) {
-			if(i / 9 == 0) {
+			if(i % 9 == 0) {
 				cnt ++;
-				drainage = i;
-				
 			}
 		}
-		System.out.println("답 : " + cnt + "개" + drainage);
+		
+		number = new int[cnt];
+		
+		for (int i = 50; i <= 100; i++) {
+			if(i % 9 == 0) {
+				number[loop] = i;
+				loop++;
+			}
+		}
+		
+		System.out.println("답 : " + cnt + "개");
+		System.out.print("{ ");
+		for (int i = 0; i < number.length; i++) {
+			System.out.print(number[i] + " ");
+			if (i < loop - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.println("}");
 		System.out.println();
+		
 		System.out.println("문제4) 28의 배수 중에서 가장 큰 세자리 수를 구하시요.");
-
+		System.out.println();
+		
+		int max = 0;
+		for (int i = 0; i < 1000; i++) {
+			if (i % 28 == 0) {
+				if (max < i) {
+					max = i;
+				}
+			}
+		}
+		System.out.println("답 : " + max);
+		System.out.println();
+		
 		System.out.println("문제5) 8의 배수를 작은수부터 5개 출력");
-
+		System.out.println();
+		
+		System.out.print("답 : ");
+		
+		cnt = 0;
+		
+		for (int i = 0; i < 100; i++) {
+			if (cnt < 5) {
+				if (i % 8 == 0) {
+					System.out.print(i + " ");
+					cnt++;
+				}
+			}
+		}
+		
+		
 	}
 
 }

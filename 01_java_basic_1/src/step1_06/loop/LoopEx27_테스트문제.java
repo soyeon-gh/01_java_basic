@@ -26,18 +26,41 @@ import java.util.Scanner;
  * 
  */
 
-
-
 public class LoopEx27_테스트문제 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
-        
+
+		int temp = 0;
+		int cnt = 0;
+		boolean isRunning = true;
+
+		System.out.println("LoopEx27_테스트문제");
+		System.out.println();
 		System.out.print("key값 입력 : ");
 		int key = scan.nextInt();
- 
 
+		System.out.println();
+
+		while (isRunning) {
+
+			System.out.print("입력 : ");
+			int getNumber = scan.nextInt();
+
+			cnt++;
+
+			if (getNumber == key && temp == 0) {
+				temp = cnt;
+			} else if (getNumber == -1) {
+				if (getNumber == key) {
+					System.out.println("결과 : key값 " + key + "가 첫번재 나타난 것은 " + temp + "번째 이다.");
+					isRunning = false;
+				} else {
+					System.out.println("결과 : key값 " + key + "  -- not found -- ");
+				}
+			}
+		}
 		scan.close();
 	}
 
