@@ -23,23 +23,26 @@ public class LoopEx25_테스트문제 {
 
 	public static void main(String[] args) {
 
-		System.out.println("문제1) 9의 배수중 십의 자리가 6인 첫번째 배수 출력");
-		System.out.println();
+		System.out.println("┌───────────────────────────────────────────────────────┐");
+		System.out.println("│                LoopEx25_테스트문제                    │");
+		System.out.println("├───────────────────────────────────────────────────────┤");
+		System.out.println("│ 문제1) 9의 배수중 십의 자리가 6인 첫번째 배수 출력    │");
+		System.out.println("│                                                       │");
 
 		for (int i = 1; i < 100; i++) {
+			
 			int answer = i * 9;
 			int number10 = answer / 10;
 
 			if (number10 == 6) {
-				System.out.println("답 : " + answer);
+				System.out.println("│ 답 : " + answer + "                                               │");
 			}
-
 		}
-		System.out.println();
-
-		System.out.println("문제2) 8로 나누면 5가 남는 수 중 150보다 적은 수 중에");
-		System.out.println("       가장 가까운수를 구하시요( 절대값 사용 x )");
-		System.out.println();
+		
+		System.out.println("├───────────────────────────────────────────────────────┤");
+		System.out.println("│ 문제2) 8로 나누면 5가 남는 수 중 150보다 적은 수 중에 │ ");
+		System.out.println("│        가장 가까운수를 구하시요( 절대값 사용 x )      │");
+		System.out.println("│                                                       │");
 
 		int answer = 0;
 		for (int i = 1; i < 150; i++) {
@@ -48,11 +51,13 @@ public class LoopEx25_테스트문제 {
 				answer = i;
 			}
 		}
-		System.out.println("답 : " + answer);
-		System.out.println();
-
-		System.out.println("문제3) 50에서 100까지 자연수중에서 9의 배수는 모두 몇개입니까?");
-		System.out.println();
+		
+		System.out.println("│ 답 : " + answer + "                                              │");
+		
+		System.out.println("├───────────────────────────────────────────────────────┤");
+		System.out.println("│ 문제3) 50에서 100까지 자연수중에서                    │");
+		System.out.println("│        9의 배수는 모두 몇개입니까?                    │");
+		System.out.println("│                                                       │");
 
 		int cnt = 0;
 		int[] number = null;
@@ -73,19 +78,19 @@ public class LoopEx25_테스트문제 {
 			}
 		}
 		
-		System.out.println("답 : " + cnt + "개");
-		System.out.print("{ ");
+		System.out.println("│ 답 : " + cnt + "개                                              │");
+		System.out.print("│ { ");
 		for (int i = 0; i < number.length; i++) {
 			System.out.print(number[i] + " ");
 			if (i < loop - 1) {
 				System.out.print(", ");
 			}
 		}
-		System.out.println("}");
-		System.out.println();
+		System.out.println("}                       │");
 		
-		System.out.println("문제4) 28의 배수 중에서 가장 큰 세자리 수를 구하시요.");
-		System.out.println();
+		System.out.println("├───────────────────────────────────────────────────────┤");
+		System.out.println("│ 문제4) 28의 배수 중에서 가장 큰 세자리 수를 구하시요. │");
+		System.out.println("│                                                       │");
 		
 		int max = 0;
 		for (int i = 0; i < 1000; i++) {
@@ -95,13 +100,13 @@ public class LoopEx25_테스트문제 {
 				}
 			}
 		}
-		System.out.println("답 : " + max);
-		System.out.println();
 		
-		System.out.println("문제5) 8의 배수를 작은수부터 5개 출력");
-		System.out.println();
+		System.out.println("│ 답 : " + max  + "                                              │");
 		
-		System.out.print("답 : ");
+		System.out.println("├───────────────────────────────────────────────────────┤");
+		System.out.println("│ 문제5) 8의 배수를 작은수부터 5개 출력                 │");
+		System.out.println("│                                                       │");
+		System.out.print("│ 답 : ");
 		
 		cnt = 0;
 		
@@ -114,6 +119,8 @@ public class LoopEx25_테스트문제 {
 			}
 		}
 		
+		System.out.println("                                    │");
+		System.out.println("└───────────────────────────────────────────────────────┘");
 		
 	}
 

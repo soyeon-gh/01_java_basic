@@ -23,26 +23,19 @@ public class LoopEx24_정답 {
 
 		int x = 1;
 		int y = 5;
-		int turn = 0;
-		for (int i = 1; i <= 5; i++) {
+		
+		
+		for (int i = 0; i < 5; i++) {
 
-			if (turn == 0) {
-
+			if (i % 2 == 0) {
 				for (int j = x; j <= y; j++) {
-					System.out.print(j + " ");
+					System.out.print(" " + j + "\t");
 				}
-
-				turn = 1;
-
 			}
-
-			else if (turn == 1) {
-				for (int j = y; j <= x; j--) {
-
-					System.out.print(j + " ");
+			else {
+				for (int j = y; j >= x; j--) {
+					System.out.print(" " + j + "\t");
 				}
-
-				turn = 0;
 			}
 			System.out.println();
 			x = y + 1;
