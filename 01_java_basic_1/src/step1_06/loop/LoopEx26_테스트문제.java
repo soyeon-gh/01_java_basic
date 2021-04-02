@@ -17,126 +17,43 @@ import java.util.Scanner;
 
 public class LoopEx26_테스트문제 {
 
-	
-	public int primeNumber(int getNumber) {
-		int number = 0;
-		boolean isRunning = true;
-
-		while (isRunning) {
-
-			
-
-			int maxNumber = getNumber * 2;
-
-			if (getNumber != 0) {
-
-				int cnt = 0;
-				boolean isLoop = true;
-				// <-- getNumber가 소수인지 판별 -->
-				int i = getNumber;
-				while (isLoop) {
-
-					for (int j = 1; j <= i; j++) {
-
-						if (i % j == 0) {
-							cnt++;
-						}
-					}
-
-					if (cnt == 2) {
-						number = i;
-						isLoop = false;
-					}
-					
-					i++;
-				}
-				System.out.println(number);
-
-//				for (int i = getNumber; i <= maxNumber; i++) {
-//					
-//					if (i % j == 0) {
-//						cnt++;
-//					}
-//					
-//					j ++;
-//					
-//					if(cnt == 2)  {
-//						 number = i;
-//						 System.out.println(getNumber + "보다 큰 첫번째 소수는 " +  number);
-//					}
-//				}
-
-			} else {
-				System.out.println("종료합니다.");
-				isRunning = false;
-			}
-		}
-		
-		
-		return getNumber;
-	}
-	
-	
-	
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-		int number = 0;
 		boolean isRunning = true;
 
 		while (isRunning) {
 
 			System.out.println("0을 입력하면 종료됩니다.");
 			System.out.print("Enter Number ? ");
-			int getNumber = scan.nextInt();
+			int getNumber = sc.nextInt();
 
-			int maxNumber = getNumber * 2;
-
-			if (getNumber != 0) {
+			if (getNumber != 0) { // 종료가 아니면
 
 				int cnt = 0;
-				boolean isLoop = true;
-				// <-- getNumber가 소수인지 판별 -->
-				int i = getNumber;
-				while (isLoop) {
 
-					for (int j = 1; j <= i; j++) {
+				for (int i = getNumber; i <= getNumber * 2; i++) { 
 
-						if (i % j == 0) {
+					for (int j = 1; j <= i; j++) { 
+						if ((i % j) == 0) {
 							cnt++;
 						}
 					}
-
 					if (cnt == 2) {
-						number = i;
-						isLoop = false;
+						System.out.println(getNumber + " 보다 큰 첫번째 소수는 " + i + "이다.");
+						break;
 					}
-					
-					i++;
-				}
-				System.out.println(number);
 
-//				for (int i = getNumber; i <= maxNumber; i++) {
-//					
-//					if (i % j == 0) {
-//						cnt++;
-//					}
-//					
-//					j ++;
-//					
-//					if(cnt == 2)  {
-//						 number = i;
-//						 System.out.println(getNumber + "보다 큰 첫번째 소수는 " +  number);
-//					}
-//				}
+					cnt = 0;
+				}
 
 			} else {
 				System.out.println("종료합니다.");
 				isRunning = false;
 			}
 		}
-		scan.close();
+		sc.close();
 
 	}
 
