@@ -40,20 +40,50 @@ public class LoopEx07_정답 {
 				System.out.println("정답입니다.");
 				System.out.println("점수 : " + score);
 				isRunning = false;
+			} else if(score == 0) {
+				System.out.println("게임종료");
+				System.out.println("점수 : " + score);
+				isRunning = false;
 			} else if(userAnswer < randomNumber){
 				System.out.println("더 큰 수 입니다.");
+				System.out.println(score);
 				score -= 5;
 			} else if(userAnswer > randomNumber){
 				System.out.println("더 작은 수 입니다.");
+				System.out.println(score);
 				score -= 5;
+			} 
+		}
+		/*
+		while (isRunning) {
+			
+			if (score != 0) {
+				
+				System.out.print("user >> ");
+				int userAnswer = sc.nextInt();
+				
+				if (userAnswer == randomNumber) {
+					System.out.println("computer >> " + randomNumber);
+					System.out.println("user >> " + userAnswer);
+					System.out.println("정답입니다.");
+					System.out.println("점수 : " + score);
+					isRunning = false;
+				} else if(userAnswer < randomNumber){
+					System.out.println("더 큰 수 입니다.");
+					score -= 5;
+				} else if(userAnswer > randomNumber){
+					System.out.println("더 작은 수 입니다.");
+					score -= 5;
+				}
 			} else if(score == 0) {
 				System.out.println("게임종료");
 				System.out.println("점수 : " + score);
 				isRunning = false;
 			} 
 		}
+		*/
+		
 		sc.close();
-
 	}
 
 }
